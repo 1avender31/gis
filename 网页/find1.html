@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="description" content="DevLab: Configure a popup">
+    <meta charset="UTF-8">
+    <title>World Map</title>
+    <link rel="stylesheet" href="find1.css">
+    <link rel="stylesheet" href="https://js.arcgis.com/4.23/esri/themes/light/main.css">
+    <script src="https://js.arcgis.com/4.23/"></script>
+</head>
+
+<body>
+    <script src="./find1.js"></script>
+
+    <div id="viewDiv"></div>
+
+    <div id="div2"></div>
+
+    <div id="check_div">
+        <p>底图选择</p>
+        <input type="radio" id="gray" name="basemap" checked><img src="./IMG/gray.png" alt="gray" height="90px"
+            width="90px" title="gray">
+       
+        <input type="radio" id="hybrid" name="basemap"><img src="./IMG/hybrid.jpg" alt="hybrid" height="90px"
+            width="90px" title="hybrid">
+        
+        <!-- <input type="radio" id="terrain" name="basemap"><img src="./IMG/terrin.png" alt="terrain" height="105px"
+            width="116px" title="terrain">
+        <br /> -->
+        <input type="radio" id="osm" name="basemap"><img src="./IMG/osm.jpg" alt="osm" height="90px"
+            width="90px" title="osm">
+        
+        <input type="radio" id="streets" name="basemap"><img src="./IMG/streets.png" alt="streets"  height="90px"
+            width="90px" title="streets">
+       
+    </div>
+
+    <div id="layerbox">
+        <p>矢量图层</p>
+        <div class="singlebox">
+			<div class="singlebox">
+				<p>Hong_Kong_School
+				<input type="button" name="add_button" id="Add_point" value="Add">
+				<input type="button" name="remove_button" id="Remove_point" value="Remove">
+				<br/>
+				<!-- <img src="./IMG/point.png" alt="Point feature Layer" title="Point feature Layer" height="100px" width="height="100px" width="100px""> -->
+				</p>
+
+     <p>Libraries
+            <input type="button" name="add_button" id="Add_polygon" value="Add">
+            <input type="button" name="remove_button" id="Remove_polygon" value="Remove">
+            <br/>
+            <!-- <img src="./IMG/polyline.png" alt="Polyline feature Layer" title="Polyline feature Layer" height="100px" width="100px"> -->
+        	</p>
+
+			<p>Projected_Population
+			<input type="button" name="add_button" id="Add_line" value="Add">
+			<input type="button" name="remove_button" id="Remove_line" value="Remove"><br/>
+			<br/>
+			<!-- <img src="./IMG/polyline.png" alt="Polyline feature Layer" title="Polyline feature Layer" height="100px" width="100px"> -->
+			</p>
+
+        <div id="Layers"></div>
+
+    </div>
+	
+	<div id="controls" class="esri-widget">
+	      <button id="buffer" class="esri-button">Buffer</button>
+	      <button id="reset" class="esri-button esri-button--secondary">Reset</button>
+	    </div>
+
+    <div id="coordsWidget" className = "esri-widget esri-component"></div>
+
+    <div id="simul">
+        <input type="button" id="simul_button" value="分屏显示">
+    </div>
+	<div id="demo">
+		香港人口与教育分布图
+	</div>
+	
+	<div id="demo1">
+		香港（Hong Kong），简称“港”，全称中华人民共和国香港特别行政区，位于中国南部、珠江口以东，西与澳门隔海相望，北与深圳相邻，南临珠海万山群岛，区域范围包括香港岛、九龙、新界和周围262个岛屿，陆地总面积1106.66平方千米，海域面积1648.69平方千米。截至2020年末，总人口747.42万人，是世界上人口密度最高的地区之一，人均寿命全球第一，人类发展指数全球第四。<br/>
+		香港是一座高度繁荣的自由港和国际大都市，与纽约、伦敦并称为“纽伦港”，是全球第三大金融中心，重要的国际金融、贸易、航运中心和国际创新科技中心，也是全球最自由经济体和最具竞争力城市之一，在世界享有极高声誉，被GaWC评为世界一线城市第三位。<br /><br />
+		香港的教育制度大致可以分为学前教育、十二年免费教育、高中及预科课程、专上课程。<br />
+		学前教育：透过私立的幼儿园和幼稚园，为学前儿童提供机会学习与群体相处。<br />
+		九年免费教育：在全港设立官立或津贴资助学校，为适龄学童提供六年制小学及三年制初中课程。<br />
+		高中及预科课程：设立两年制高中（中四、中五），为学生提供工作前最基本的教育；设立两年制预科课程（中六、中七），作为学生报考大学前的课程准备。<br />
+		专上课程：提供各种形式的专上课程，包括工业学院、大专、大学教育。<br />
+		叠加人口数矢量图与教育设施分布图可发现，人口数较多的地区教育设施数量较多，分布密集。
+	</div>
+</body>
+
+</html>

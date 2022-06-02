@@ -1,0 +1,66 @@
+html,body{
+    width: 100%;
+    height: 100%;
+	font-family: "Avenir Next"
+}
+#viewDiv{
+    padding: 0%;
+    margin: 0%;
+    height: 100%;
+    width: 70%;
+    border: 6px;
+    border-color: black;
+    border-radius: 10%;
+	font-family: "Avenir Next"
+}
+
+#check_div{
+    position:fixed;
+    top: 70%;
+    right:30%;
+    border: 5px;
+    border-color: black;
+    border-radius: 10%;
+}
+
+#layerbox{
+    position: fixed;
+    top: 30%;
+    right: 30%;
+}
+
+#coordsWidget{
+color:black;
+	font-size:15px ;
+    position:fixed;
+    bottom: 5%;
+    left: 0%;
+    padding: 9px 18px 7px;
+}
+
+#simul{
+    position: fixed;
+    top: 90px;
+    right:30%;
+}
+
+#demo{
+	position: fixed;
+	bottom: 95%;
+	right: 7%;
+}
+
+#demo1{
+	position: fixed;
+	top:7%;
+	left:71%;
+	font-size: 15px;
+}
+
+/* #controls {
+            width: 100px;
+            padding: 0px 0px 0px 0px;
+          }
+          .esri-button {
+            margin: 0px 0px 0px 0px;
+          } */
